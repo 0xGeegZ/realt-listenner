@@ -1,5 +1,5 @@
 #Debug screens
-screens
+screens/*
 
 # Use yarn.lock instead
 package-lock.json
