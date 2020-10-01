@@ -16,7 +16,7 @@ const run = async (browser, url) => {
       await slack.send(`PROPERTY ${name} AVAILABLE : ${url}`)
     else console.log(`PROPERTY ${name} UNAVAILABLE`)
 
-    await page.screenshot({ path: `${__dirname}/screens/${name}.png` })
+    // await page.screenshot({ path: `${__dirname}/screens/${name}.png` })
   } catch (error) {
     console.log(`[] SCRAPPING PROPERTY ${name}`)
     console.log(error.message)
