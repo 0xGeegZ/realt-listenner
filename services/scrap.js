@@ -6,7 +6,7 @@ const run = async (browser, url) => {
   const names = url.split("/")
   const name = names[names.length - 2]
 
-  console.log(`Running Scrapper for PROPERTY ${name}`)
+  // console.log(`Running Scrapper for PROPERTY ${name}`)
 
   try {
     const page = await browser.newPage()

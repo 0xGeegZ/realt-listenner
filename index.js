@@ -15,7 +15,7 @@ const launch = async () => {
   })
 
   const launchScrapper = url => scrap.run(browser, url)
-  const options = { concurrency: 2 }
+  const options = { concurrency: 1 }
 
   await Promise.map(urls["V0"], launchScrapper, options)
 
@@ -24,8 +24,8 @@ const launch = async () => {
 
 const run = async () => {
   await launch()
-  new CronJob("*/15 * * * *", async () => {
-    console.log(`Job running running 30 MINUTS : ${new Date()}`)
+  new CronJob("*/10 * * * *", async () => {
+    console.log(`Job running running 10 MINUTS : ${new Date()}`)
     await launch()
   }).start()
 }
