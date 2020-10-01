@@ -10,7 +10,10 @@ const urls = require("./urls.json")
 const launchScrapper = async () => {
   console.log(`Launching Jobs for ${urls.length} propetires`)
 
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox"]
+  })
 
   await Promise.map(urls, url => scrap.run(browser, url), { concurrency: 2 })
 
