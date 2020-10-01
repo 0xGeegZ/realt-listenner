@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer")
 
 const scrap = require("./services/scrap")
 
-const urls = require("./urls.json")
+const urls = require("./data/urls.json")
 
 const launchScrapper = async () => {
   console.log(`Launching Jobs for ${urls.length} propetires`)
