@@ -16,7 +16,7 @@ const launch = async () => {
 
   const launchScrapper = url => scrap.run(browser, url)
 
-  const options = { concurrency: Math.ceil(urls.length / 4) }
+  const options = { concurrency: Math.ceil(urls.length / 8) }
 
   await Promise.map(urls, launchScrapper, options)
 
