@@ -1,6 +1,9 @@
 #Debug screens
 screens/*
 
+#Deployment Script
+deploy.sh
+
 # Use yarn.lock instead
 package-lock.json
 

@@ -1,8 +1,8 @@
 {
   "name": "realt-listenner",
-  "version": "0.2.18",
-  "description": "LimonX API V2",
-  "author": "Guillaume Dieudonné <guillaume@vaka.fr>",
+  "version": "1.0.0",
+  "description": "RealT Listenner",
+  "author": "Guillaume Dieudonné <dieudonneguillaume@hotmail.fr>",
   "main": "index.js",
   "license": "MIT",
   "private": true,
