@@ -18,7 +18,7 @@ const run = async (browser, url) => {
 
     // await page.screenshot({ path: `${__dirname}/screens/${name}.png` })
   } catch (error) {
-    console.log(`[] SCRAPPING PROPERTY ${name}`)
+    console.log(`[ERROR] SCRAPPING PROPERTY ${name}`)
     console.log(error.message)
   }
 }

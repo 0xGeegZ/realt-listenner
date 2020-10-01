@@ -36,7 +36,7 @@ const sendTo = async (channel, message) => {
 
     return
   } catch (error) {
-    console.log(`slack ERROR : ${error.message}`)
+    console.log(`[ERROR] slack : ${error.message}`)
     throw error
   }
 }
