@@ -11,7 +11,7 @@ const launchScrapper = async () => {
   console.log(`Launching Jobs for ${urls.length} propetires`)
 
   const browser = await puppeteer.launch({
-    args: ["--no-sandbox"]
+    args: ["--no-sandbox", "--disable-setuid-sandbox"]
   })
 
   await Promise.map(urls, url => scrap.run(browser, url), { concurrency: 2 })
