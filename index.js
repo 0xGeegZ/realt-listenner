@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer")
 
 const scrap = require("./services/scrap")
 
-const urls = require("./data/urls.json")
+const urls = require("./data/urls.json")["V0"]
 
 const launch = async () => {
   console.log(`Launching Jobs for ${urls.length} propetires`)
@@ -15,9 +15,10 @@ const launch = async () => {
   })
 
   const launchScrapper = url => scrap.run(browser, url)
-  const options = { concurrency: 1 }
 
-  await Promise.map(urls["V0"], launchScrapper, options)
+  const options = { concurrency: Math.ceil(urls.length / 4) }
+
+  await Promise.map(urls, launchScrapper, options)
 
   await browser.close()
 }

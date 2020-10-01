@@ -11,6 +11,7 @@ const run = async (browser, url) => {
   try {
     const page = await browser.newPage()
     await page.goto(url)
+    // await page.goto(url, { waitUntil: "load", timeout: 1000 * 10 })
 
     if ((await page.$(SELECTOR)) === null)
       await slack.send(`PROPERTY ${name} AVAILABLE : ${url}`)
@@ -18,7 +19,8 @@ const run = async (browser, url) => {
 
     // await page.screenshot({ path: `${__dirname}/screens/${name}.png` })
   } catch (error) {
-    console.log(`[ERROR] SCRAPPING PROPERTY ${name} : ${error.message}`)
+    console.log(`[ERROR] SCRAPPING PROPERTY ${name} : ${error.message}
+    ${url}`)
   }
 }
 
