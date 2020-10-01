@@ -11,7 +11,6 @@ const launchScrapper = async () => {
   console.log(`Launching Jobs for ${urls.length} propetires`)
 
   const browser = await puppeteer.launch({
-    headless: true,
     args: ["--no-sandbox"]
   })
 
