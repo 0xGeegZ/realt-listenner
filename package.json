@@ -1,0 +1,27 @@
+{
+  "name": "realt-listenner",
+  "version": "0.2.18",
+  "description": "LimonX API V2",
+  "author": "Guillaume Dieudonné <guillaume@vaka.fr>",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=10.0.0",
+    "yarn": ">=1.10.1"
+  },
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "cross-env NODE_ENV=production  pm2 start index.js",
+    "stop": "pm2 stop all",
+    "delete": "pm2 delete all",
+    "list": "pm2 list all"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bluebird": "^3.7.2",
+    "cron": "^1.8.2",
+    "nodemon": "^2.0.4",
+    "puppeteer": "^5.3.1"
+  }
+}
