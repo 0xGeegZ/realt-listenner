@@ -10,6 +10,7 @@ const headers = {
 
 const SLACK_API_KEY = process.env.SLACK_API_KEY
 const CHANNELS = process.env.CHANNELS
+const CHANNEL = process.env.CHANNEL
 
 const sendTo = async (channel, message) => {
   try {
@@ -42,7 +43,11 @@ const sendTo = async (channel, message) => {
 }
 
 const send = async message => {
-  Promise.all(CHANNELS.map(channel => sendTo(channel, message)))
+  sendTo(CHANNEL, message)
 }
+
+// const send = async message => {
+//   Promise.all(CHANNELS.map(channel => sendTo(channel, message)))
+// }
 
 module.exports = { send }

@@ -3,6 +3,8 @@ const Promise = require("bluebird")
 
 const puppeteer = require("puppeteer")
 
+require("dotenv").config()
+
 const scrap = require("./services/scrap")
 const slack = require("./services/slack")
 
