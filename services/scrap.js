@@ -21,6 +21,8 @@ const run = async (browser, url) => {
   } catch (error) {
     console.log(`[ERROR] SCRAPPING PROPERTY ${name} : ${error.message}
     ${url}`)
+    slack.send(`[ERROR] SCRAPPING PROPERTY ${name} : ${error.message}
+    ${url}`)
   }
 }
 
